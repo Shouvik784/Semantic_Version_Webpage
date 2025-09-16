@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal website showcasing my hobbies, goals, and weekly schedule">
+    <title>Semantic Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container" role="main">
+        <header role="banner">
+            <h1>Welcome to My Website</h1>
+            <nav aria-label="Main navigation">
+                <ul role="menubar">
+                    <li role="none"><a href="#hobbies" role="menuitem">Hobbies</a></li>
+                    <li role="none"><a href="#goals" role="menuitem">Goals</a></li>
+                    <li role="none"><a href="#schedule" role="menuitem">Schedule</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section id="hobbies" class="hobbies" aria-labelledby="hobbies-heading">
+                <h2 id="hobbies-heading">My Hobbies</h2>
+                <ul role="list">
+                    <li role="listitem">
+                        <img src="Screenshot (110).png" alt="Person reading a book with a cup of coffee" width="200" height="150">
+                        Reading Books
+                    </li>
+                    <li role="listitem">
+                        <img src="Screenshot (112).png" alt="Camera on a tripod during sunset" width="200" height="150">
+                        Photography
+                    </li>
+                    <li role="listitem">
+                        <img src="Screenshot (113).png" alt="Headphones on a table with musical notes" width="200" height="150">
+                        Listening to Music
+                    </li>
+                    <li role="listitem">
+                        <img src="Screenshot (114).png" alt="Gaming controller on a desk" width="200" height="150">
+                        Playing Games
+                    </li>
+                </ul>
+            </section>
+
+            <section id="goals" class="goals" aria-labelledby="goals-heading">
+                <h2 id="goals-heading">My Top 5 Goals</h2>
+                <ol role="list">
+                    <li role="listitem">
+                        <h3>Traveling</h3>
+                        <p>Explore at least 3 new countries</p>
+                    </li>
+                    <li role="listitem">
+                        <h3>Learning New Skills</h3>
+                        <p>Master web development</p>
+                    </li>
+                    <li role="listitem">
+                        <h3>Improving Health</h3>
+                        <p>Maintain regular exercise</p>
+                    </li>
+                    <li role="listitem">
+                        <h3>Financial Growth</h3>
+                        <p>Save 20% of income</p>
+                    </li>
+                    <li role="listitem">
+                        <h3>Knowledge Expansion</h3>
+                        <p>Read 2 pages of a book every day</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="schedule" class="schedule" aria-labelledby="schedule-heading">
+                <h2 id="schedule-heading">Weekly Schedule</h2>
+                <div role="region" aria-label="Weekly schedule table" tabindex="0">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr>
+                    <td>Morning</td>
+                    <td>Work</td>
+                    <td>Meeting</td>
+                    <td>Work</td>
+                    <td>Work</td>
+                    <td>Work</td>
+                </tr>
+                <tr>
+                    <td>Noon</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td>Night</td>
+                    <td>Project Work</td>
+                    <td>Learning</td>
+                    <td>Project Work</td>
+                    <td>Learning</td>
+                    <td>Project Work</td>
+                </tr>
+                </table>
+                </div>
+            </section>
+
+            <section id="contact" class="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact Me</h2>
+                <form id="contactForm" aria-label="Contact form">
+                    <fieldset>
+                        <legend>Please fill out the form below to get in touch</legend>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required"></span></label>
+                            <input type="text" id="name" name="name" required 
+                                   aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required"></span></label>
+                            <input type="email" id="email" name="email" required
+                                   aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" aria-label="Select a subject">
+                                <option value="">Select a subject</option>
+                                <option value="question">I have a question</option>
+                                <option value="feedback">I want to provide feedback</option>
+                                <option value="collaboration">Let's collaborate</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="required"></span></label>
+                            <textarea id="message" name="message" rows="4" required
+                                      aria-required="true"></textarea>
+                        </div>
+                        
+                        <div class="form-group" role="group" aria-labelledby="preference-heading">
+                            <h3 id="preference-heading">Contact Preferences</h3>
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to newsletter</label>
+                            
+                            <fieldset>
+                                <legend>Preferred contact method:</legend>
+                                <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+                                <label for="contact-email">Email</label>
+                                
+                                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                                <label for="contact-phone">Phone</label>
+                            </fieldset>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" role="button" aria-pressed="false">
+                            <span class="btn-text">Send Message</span>
+                        </button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </div>
+    
+    <footer role="contentinfo">
+        <p>&copy; 2025 Shouvik's Website. All rights reserved.</p>
+        <p>Last updated: <time datetime="2025-09-14">September 4, 2025</time></p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            const mainContent = document.getElementById('main-content');
+            
+            if (skipLink && mainContent) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mainContent.setAttribute('tabindex', '-1');
+                    mainContent.focus();
+                });
+            }
+            
+            document.body.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    document.body.classList.add('using-keyboard');
+                }
+            });
+            
+            document.body.addEventListener('mousedown', function() {
+                document.body.classList.remove('using-keyboard');
+            });
+        });
+    </script>
+</body>
+</html>
